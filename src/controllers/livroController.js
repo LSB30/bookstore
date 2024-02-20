@@ -7,7 +7,7 @@ class LivroController {
             const listaLivros = await livro.find({});
         res.status(200).json(listaLivros);
         } catch(erro) {
-            res.status(500).json( {message: `${erro.message} - falha ao tentar buscar os livros`})
+            res.status(500).json( {message: `${erro.message} - falha na requisão`})
         }
         
     }
@@ -24,6 +24,15 @@ class LivroController {
         
     }
 
+    static async listarLivroId (req,res) {
+        try {
+            const ID = req.params.id
+            const livroEncontrado = await livro.findById(ID)
+            res.status(200).json(livroEncontrado)
+        } catch(erro) {
+            res.status(500).json({message : `${erro.message} - falha na requisição do livro`})
+        }
+    }
     static async cadastrarLivro(req, res) {
         try {
             const novoLivro = await livro.create(req.body);
@@ -33,7 +42,16 @@ class LivroController {
         }
     }
 
-    
+    static async atualizarLivro(req, res) {
+        try {
+            const ID = req.params.id;
+            await livro.findByIdAndUpdate(ID, req.body);
+            const livroAtualizado = await livro.findById(ID)
+            res.status(200).json({message : "livro atualizado com sucesso", NovoLivro: livroAtualizado}) 
+        } catch(erro) {
+            res.status(500).json({message: `${erro.messge} - falha na requisição`})
+        }
+    }
 }
 
 export default LivroController;

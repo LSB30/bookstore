@@ -11,4 +11,17 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:9000/livros
+GET http://localhost:9000/livros/65d50a63667742c0337df81b
+
+###
+
+PUT http://localhost:9000/livros/65d50a63667742c0337df81b
+Content-Type:  application/json
+
+{
+    "titulo": "Entendendo algoritmos ilustrado",
+    "preco" : 777,
+    "paginas" : 200,
+    "editora" : "dev lucas",
+    "sold": true
+}
