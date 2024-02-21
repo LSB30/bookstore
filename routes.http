@@ -2,7 +2,7 @@ POST http://localhost:9000/livros/
 Content-Type: application/json
 
 {
-    "titulo": "entendendo algoritmos",
+    "titulo": "teste para deletar",
     "preco" : 777,
     "paginas" : 200,
     "editora" : "dev lucas",
@@ -11,17 +11,21 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:9000/livros/65d50a63667742c0337df81b
+GET http://localhost:9000/livros/
 
 ###
 
-PUT http://localhost:9000/livros/65d50a63667742c0337df81b
+PUT http://localhost:9000/livros/65ce24e218a9b4feee33ebf9
 Content-Type:  application/json
 
 {
-    "titulo": "Entendendo algoritmos ilustrado",
-    "preco" : 777,
-    "paginas" : 200,
-    "editora" : "dev lucas",
-    "sold": true
+    "titulo": "Senhor dos aneis",
+    "editora": "teste",
+    "preco": 77,
+    "paginas": 777,
+    "sold": false
 }
+
+###
+
+DELETE http://localhost:9000/livros/65d53ec6b898e185e91a2420

@@ -49,7 +49,17 @@ class LivroController {
             const livroAtualizado = await livro.findById(ID)
             res.status(200).json({message : "livro atualizado com sucesso", NovoLivro: livroAtualizado}) 
         } catch(erro) {
-            res.status(500).json({message: `${erro.messge} - falha na requisição`})
+            res.status(500).json({message: `${erro.messge} - falha na atualisação`})
+        }
+    }
+
+    static async deleteLivro(req, res) {
+        try {
+            const ID = req.params.id;
+            await livro.findByIdAndDelete(ID)
+            res.status(204).json({message : "livro deletado com sucesso"}) 
+        }  catch(erro) {
+            res.status(500).json({message: `${erro.messge} - falha ao tentar deletar o livro`})
         }
     }
 }
