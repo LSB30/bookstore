@@ -53,7 +53,7 @@ class LivroController {
         }
     }
 
-    static async deleteLivro(req, res) {
+    static async deletarLivro(req, res) {
         try {
             const ID = req.params.id;
             await livro.findByIdAndDelete(ID)

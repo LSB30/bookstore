@@ -19,11 +19,11 @@ PUT http://localhost:9000/livros/65ce24e218a9b4feee33ebf9
 Content-Type:  application/json
 
 {
-    "titulo": "Senhor dos aneis",
-    "editora": "teste",
-    "preco": 77,
-    "paginas": 777,
-    "sold": false
+    "titulo": "Senhor dos aneis"
+    //"editora": "teste",
+    //"preco": 77,
+    //"paginas": 777,
+    //"sold": false
 }
 
 ###
