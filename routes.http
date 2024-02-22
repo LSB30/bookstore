@@ -1,12 +1,14 @@
+
 POST http://localhost:9000/livros/
 Content-Type: application/json
 
 {
-    "titulo": "teste para deletar",
+    "titulo": "Nosso Livro de Historias",
     "preco" : 777,
-    "paginas" : 200,
-    "editora" : "dev lucas",
-    "sold": false
+    "paginas" : 777,
+    "editora" : "Lucas",
+    "sold": false,
+    "autor" : "65d631772bd665ec3a78526f"
 }
 
 ###
@@ -28,4 +30,31 @@ Content-Type:  application/json
 
 ###
 
-DELETE http://localhost:9000/livros/65d53ec6b898e185e91a2420
+DELETE http://localhost:9000/livros/65d636ea00fcfd222f437cd2
+
+###
+
+POST http://localhost:9000/autores/
+Content-Type: application/json
+
+{
+    "nome" : "Lucas Santana and Jasna Santos",
+    "nacionalidade" : "Brazil"
+}
+
+###
+
+GET http://localhost:9000/autores/
+
+###
+
+PUT http://localhost:9000/autores/
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+DELETE http://localhost:9000/autores/65d6372d5c1c2680ee5351a6
