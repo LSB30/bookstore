@@ -13,7 +13,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:9000/livros/
+GET http://localhost:9000/livros/busca?sold=false
 
 ###
 
