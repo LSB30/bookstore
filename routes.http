@@ -12,8 +12,8 @@ Content-Type: application/json
 }
 
 ###
-
-GET http://localhost:9000/livros/busca?sold=false
+//busca?sold=false
+GET http://localhost:9000/livros/
 
 ###
 
@@ -29,8 +29,11 @@ Content-Type:  application/json
 }
 
 ###
-
 DELETE http://localhost:9000/livros/65d636ea00fcfd222f437cd2
+
+
+
+//autores metodos
 
 ###
 
@@ -38,13 +41,14 @@ POST http://localhost:9000/autores/
 Content-Type: application/json
 
 {
-    "nome" : "Lucas Santana and Jasna Santos",
+    "nome" : "Lucas Santana",
     "nacionalidade" : "Brazil"
 }
 
 ###
 
-GET http://localhost:9000/autores/
+
+GET http://localhost:9000/autores/5df79e41d89df24316468f01fdfdfdf
 
 ###
 
